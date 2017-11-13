@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvTodoListItem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/fabAdd" />
+
+    <EditText
+        android:id="@+id/etItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/rvTodoListItem"
+        android:layout_toLeftOf="@+id/fabAdd"
+        android:layout_toStartOf="@+id/fabAdd"
+        android:background="#ffff"
+        android:hint="Write it here..."
+        android:padding="10dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="16dp"
+        app:backgroundTint="@color/cardview_light_background"
+        app:srcCompat="@drawable/ic_edit" />
+
+
+</RelativeLayout>
