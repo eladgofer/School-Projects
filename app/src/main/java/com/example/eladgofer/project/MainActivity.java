@@ -16,6 +16,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.eladgofer.project.fragments.AboutFragment;
 import com.example.eladgofer.project.fragments.MovieFragment;
 import com.example.eladgofer.project.fragments.NewsFragment;
 import com.example.eladgofer.project.fragments.PhraseFragment;
@@ -164,6 +165,11 @@ public class MainActivity extends AppCompatActivity
         //noinspection SimplifiableIfStatement
         switch (id) {
             case R.id.action_settings:
+                getSupportFragmentManager().
+                        beginTransaction().
+                        addToBackStack("about").
+                        replace(R.id.frame, new AboutFragment()).
+                        commit();
                 return true;
             case R.id.action_sign_out:
                 AuthUI.getInstance().signOut(this);
